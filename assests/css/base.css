@@ -1,0 +1,22 @@
+:root {
+    --bg-color: #184787;
+    --header-color: #f7f7f7;
+    --color-menu: #f7f7f7;
+    --color-hover: #3575d3;
+    --font-color: #333;
+}
+
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    line-height: 1.6rem;
+}
+
+
+
+
