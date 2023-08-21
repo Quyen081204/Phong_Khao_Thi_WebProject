@@ -110,3 +110,39 @@ for ( const title of titles )
 {
     title.addEventListener('click', AppearanceSearchBox)
 }
+// End Box Dang nhap
+ 
+// Start Box Search
+const modal = document.querySelector('.js-modal')
+const buttonSearch = document.querySelector('.js-icon-search')
+const buttonClose = document.querySelector('.js-modal-container')
+function ModalAppearance () {
+    modal.classList.add('open')
+}
+function Close ()
+{
+    modal.classList.remove('open')
+}
+buttonSearch.addEventListener('click', ModalAppearance)
+buttonClose.addEventListener('click', Close)
+// End Box Search
+
+// Start Scroll 
+const scrollUpp = document.querySelector('.js-scroll')
+function ScrollUpToo ()
+{
+    if ( window.scrollY > 200 )
+    {
+        scrollUpp.style.display = "flex"
+    }
+    else
+    {
+        scrollUpp.style.display = "none"
+    }
+}
+window.addEventListener('scroll', ScrollUpToo)
+scrollUpp.addEventListener('click', () => {
+    window.scrollTo({
+        top : 0
+    })
+} )
