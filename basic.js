@@ -114,7 +114,7 @@ for ( const title of titles )
  
 // Start Box Search
 const modal = document.querySelector('.js-modal')
-const buttonSearch = document.querySelector('.js-icon-search')
+const buttonSearchS = document.querySelectorAll('.js-icon-search')
 const buttonClose = document.querySelector('.js-modal-container')
 function ModalAppearance () {
     modal.classList.add('open')
@@ -123,7 +123,10 @@ function Close ()
 {
     modal.classList.remove('open')
 }
-buttonSearch.addEventListener('click', ModalAppearance)
+for ( const buttonSearch of buttonSearchS )
+{
+    buttonSearch.addEventListener('click', ModalAppearance)
+}
 buttonClose.addEventListener('click', Close)
 // End Box Search
 
@@ -146,3 +149,18 @@ scrollUpp.addEventListener('click', () => {
         top : 0
     })
 } )
+// End Scroll
+
+// Start TopBar
+ const MenuAppearance = document.querySelector('.js-nav-sub')
+ function MenuCheckHeight ()
+ {
+    if (window.scrollY > 150 )
+    {
+        MenuAppearance.style.display = "flex"
+    } 
+    else{
+        MenuAppearance.style.display = "none"
+    }
+ }
+ window.addEventListener('scroll', MenuCheckHeight )
