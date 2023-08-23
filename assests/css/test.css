@@ -108,3 +108,42 @@
     line-height: 28px;
     color: #505050;
 }
+
+/* CO CAU TO CHUC */
+
+.body-manager-name {
+    margin: 25px 0;
+    font-size: 1.6rem;
+    color: #505050;
+    text-align: center;
+    
+}
+
+.body-manager-heading {
+    padding: 10px 0;
+}
+
+.body-staff-heading {
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: 500; 
+    color: #252525; 
+    display: block;
+}
+
+.body-staff-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.body-staff-name > span {
+    display: inline-block;
+}
+
+.body-staff-name > span p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #252525;
+    line-height: 28px;
+}
