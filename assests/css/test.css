@@ -26,7 +26,6 @@
     text-align: center;
     font-size: 1.6rem;
     position: relative;
-    z-index: 10;
     color: #fff;
 }
 
@@ -146,4 +145,19 @@
     font-weight: 500;
     color: #252525;
     line-height: 28px;
+}
+
+.submenu-text-link {
+    text-decoration: none;
+    color: #505050;
+}
+
+.submenu-text-link:hover {
+    color: #fc7f0c;
+}
+/* .nav-sub--zindex {
+    z-index: 1050;
+} */
+.menu-sub--zindex .nav-sub--zindex {
+    z-index: 1050;
 }

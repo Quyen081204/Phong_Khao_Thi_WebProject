@@ -555,13 +555,13 @@ h3 {
 }
 .modal 
 {
-    position: fixed;
+    position: fixed ;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1050;
-    background-color: #0d0d0df7;
+    z-index: 1050 ;
+    background-color: #0d0d0df7 !important;
     outline: 0;
     display: none;
     animation: Fade ease 0.7s;
@@ -660,16 +660,16 @@ h3 {
     display: flex;
     width: 100%;
     list-style: none;
-    background-color: #337ab7 !important;
+    background-color: #337ab7 ;
     height: 55px;
     justify-content: center;
     align-items: center;
-    position: fixed !important;
+    position: fixed ;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
-    z-index: 1050;
+    /* z-index: 1050; */
     display: none;
     animation: Fade ease .7s;
 }
