@@ -237,8 +237,223 @@
         </div>
     </div>
     
-   
-    <script src="./basic.js"></script>
+        <!-- BOX DANG NHAP -->
+        <div class="boxx js-box">
+            <div class="box js-box-container">
+                
+                <div class="box-container">
+                    <h1 class="announce"> Vui lòng nhập tài khoản </h1>
+                </div>
+                
+                <div class="input-field">
+                    <input type="text" class="input" placeholder=" Tên tài khoản" required>
+                    <i class="input-field--icon ti-user"></i>
+                </div>
+                
+                <div class="input-field">
+                    <input type="password" class="input" placeholder=" Mật khẩu" required>
+                    <i class="input-field--icon ti-lock"></i>
+                </div>
+                
+                <div class="input-field">
+                    <input type="submit" class="submit" value=" ĐĂNG NHẬP ">
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="Menu-sub">
+        <ul class="nav-sub js-nav-subb">
+            <li><a href="#" class="nav-bg-sub"> Trang Chủ
+            </a></li>
+            <li>
+                <a href="#"  class="nav-bg-sub"> Giới thiệu</a>
+                <ul class="subnav-sub">
+                    <li><a href="">Lịch Sử Hình Thành </a></li>
+                    <li><a href="">Nhiệm vụ và Trách Nhiệm</a></li>
+                    <li><a href="">Cơ cấu nhân sự</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="nav-bg-sub"> Văn Bản </a>
+                <ul class="subnav-sub">
+                    <li> <a href=""> Hướng dẫn</a></li>
+                    <li> <a href=""> Văn bản</a></li>
+                </ul>
+            </li>
+            <li><a href="#"  class="nav-bg-sub"> Khảo Thí </a></li>
+            <li>
+                <a href="#" class="nav-bg-sub"> Xem điểm </a>
+                <ul class="subnav-sub">
+                    <li class="js-title"><span class="subnav-item-sub">Điểm thi đại học hệ chính quy</span></li>
+                    <li class="js-title"><span class="subnav-item-sub">Điểm thi sau đại học</span></li>
+                    <li class="js-title"><span class="subnav-item-sub">Điểm thi từ xa</span></li>
+                </ul>
+            </li>
+            <li><a href="#" class="nav-bg-sub"> Quy Định</a></li>
+            <div class="icon-search js-icon-search">
+                <i class="  ti-icon-search ti-search js-ti-icon-search"></i>
+            </div>
+        </ul>
+        
+    </div> 
+    <!-- Start Box Search - JS -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <button type="button" class="close js-close">
+                <i class="button-ti ti-close"> </i>
+            </button>
+        </div>
+        <div class="modal-search">
+            <div class="modal-search-content">
+                <input class="search-content" placeholder="vd : thời khóa biểu" type="text" required maxlength="100" >
+            </div>
+        </div>
+    </div>
+    <!--  Start Scroll -->
+    <button  class="scroll js-scroll">
+        <span class="icon-scroll ti-arrow-up "> </span>
+    </button>
+    
+        <script >
+        const MenuAppearanceS = document.querySelector('.js-nav-subb')
+        function MenuCheckHeight ()
+        {
+           if (window.scrollY > 150 )
+            {
+               MenuAppearanceS.style.display = "flex"
+            } 
+        else{
+            MenuAppearanceS.style.display = "none"
+            }
+        }
+        window.addEventListener('scroll', MenuCheckHeight )
+        const scrollUpp = document.querySelector('.js-scroll')
+function ScrollUpToo ()
+{
+    if ( window.scrollY > 200 )
+    {
+        scrollUpp.style.display = "flex"
+    }
+    else
+    {
+        scrollUpp.style.display = "none"
+    }
+}
+window.addEventListener('scroll', ScrollUpToo)
+scrollUpp.addEventListener('click', () => {
+    window.scrollTo({
+        top : 0
+    })
+} )
+// Start Box Search
+const modalS = document.querySelector('.js-modal')
+const buttonSearchS = document.querySelectorAll('.js-icon-search')
+const buttonClose = document.querySelector('.js-modal-container')
+function ModalAppearance () {
+    modalS.classList.add('open')
+}
+function Close ()
+{
+    modalS.classList.remove('open')
+}
+for ( const buttonSearch of buttonSearchS )
+{
+    buttonSearch.addEventListener('click', ModalAppearance)
+}
+buttonClose.addEventListener('click', Close)
+// End Box Search
+// GET CURRENT DATE
+var currentDate = new Date();
+
+var day = currentDate.getDay();
+var date = currentDate.getDate();
+var month = currentDate.getMonth();
+var year = currentDate.getFullYear();
+
+// CHANGE DOM
+var currentDay = "";
+var currentMonth = "";
+var updateDate = "";
+var fulldate = "";
+
+var dateBox = document.querySelectorAll(".date-box");
+
+switch (day) {
+    case 0:
+        currentDay = "Sunday" 
+    break;
+    case 1:
+        currentDay = "Monday"  
+    break;
+    case 2:
+        currentDay = "Tuesday"  
+    break;
+    case 3:
+        currentDay = "Wednesday"  
+    break;
+    case 4:
+        currentDay = "Thursday"  
+    break;
+    case 5:
+        currentDay = "Friday"  
+    break;
+    case 6:
+        currentDay = "Saturday"  
+    break;
+} 
+
+
+switch (month) {
+    case 0:
+        currentMonth = "Jan";    
+     break;
+    case 1:
+        currentMonth = "Feb";
+    break;
+    case 2:
+        currentMonth = "Mar";
+    break;
+    case 3:
+        currentMonth = "Apr";
+    break;
+    case 4:
+        currentMonth = "May";
+    break;
+    case 5:
+        currentMonth = "Jun";
+    break;
+    case 6:
+        currentMonth = "Jul";
+    break;
+    case 7:
+        currentMonth = "Aug";
+    break;
+    case 8:
+        currentMonth = "Sep";
+    break;
+    case 9:
+        currentMonth = "Oct";
+    break;
+    case 10:
+        currentMonth = "Nov";
+    break;
+    case 11: 
+        currentMonth = "Dec";
+    break;
+}
+
+// UPDATE
+
+fulldate = currentDay + ", " + currentMonth + " " + date + "th" + ", " + year;
+
+for (var i = 0;i < dateBox.length;i++) {
+    dateBox[i].innerText = fulldate;
+}
+
+    </script>
+    
 
 
 </body>

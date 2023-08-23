@@ -113,15 +113,15 @@ for ( const title of titles )
 // End Box Dang nhap
  
 // Start Box Search
-const modal = document.querySelector('.js-modal')
+const modalS = document.querySelector('.js-modal')
 const buttonSearchS = document.querySelectorAll('.js-icon-search')
 const buttonClose = document.querySelector('.js-modal-container')
 function ModalAppearance () {
-    modal.classList.add('open')
+    modalS.classList.add('open')
 }
 function Close ()
 {
-    modal.classList.remove('open')
+    modalS.classList.remove('open')
 }
 for ( const buttonSearch of buttonSearchS )
 {
